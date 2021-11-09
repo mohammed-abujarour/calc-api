@@ -25,6 +25,7 @@ public class TestAdd {
 	
 	@Test	
 	void testAddCase1() {		
+		
 		Assertions.assertEquals(Calculator.add(a, b), 80.4);		
 	}
 
