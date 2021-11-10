@@ -3,6 +3,8 @@
  */
 package de.abujarour.calc;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 /**
  * @author mohammed
  *
@@ -19,8 +21,19 @@ import de.abujarour.calc.logic.Calculator;
 public class CalcController {
 	
 	@GetMapping("/add")
-	public double add(@RequestParam(value = "op1") double op1, @RequestParam(value = "op2") double op2) {
-		return Calculator.add(op1, op2);
+	public ResponseEntity<Double> add(@RequestParam(value = "op1") double op1, @RequestParam(value = "op2") double op2) {
+		return ResponseEntity.status(HttpStatus.OK).body(Calculator.add(op1, op2));
+
+	}
+	/**
+	 * TODO: implement the multiplication service
+	 * @param op1
+	 * @param op2
+	 * @return
+	 */
+	@GetMapping("/multiply")
+	public ResponseEntity<String> multiply(@RequestParam(value = "op1") double op1, @RequestParam(value = "op2") double op2) {
+		return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).body(null);
 	}
 
 }
