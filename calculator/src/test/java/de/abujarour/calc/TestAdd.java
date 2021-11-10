@@ -36,7 +36,8 @@ public class TestAdd {
 	}
 	
 	@Test	
-	void testAddCase3() {		
+	void testAddCase3() {
+		
 		Assertions.assertEquals(Calculator.add(b, -b), 0);		
 	}
 
