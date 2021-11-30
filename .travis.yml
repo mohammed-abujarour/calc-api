@@ -2,3 +2,6 @@ language: java
 #mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 before_install:
   - cd calculator
+install: true
+script:
+  - mvn install  
